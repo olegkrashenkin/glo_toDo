@@ -41,13 +41,10 @@ todoControl.addEventListener('submit', (event) => {
 
     if (headerInput.value) {
         const newtoDo = { text: headerInput.value, completed: false }
-
         toDo.push(newtoDo)
-
         headerInput.value = ''
-
         render()
     }
 })
 
-startApp()
+render()
