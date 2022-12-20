@@ -38,12 +38,14 @@ const render = () => {
 
 todoControl.addEventListener('submit', (event) => {
     event.preventDefault()
-
-    if (headerInput.value) {
+    if (headerInput.value.trim()) {
         const newtoDo = { text: headerInput.value, completed: false }
+
         toDo.push(newtoDo)
         headerInput.value = ''
         render()
+    } else {
+        headerInput.value = ''
     }
 })
 
